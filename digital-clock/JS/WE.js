@@ -7,12 +7,6 @@ window.wallpaperPropertyListener = {
         }
     }
 }
-broken :
-top left
-top right
-center right
-bottom right
-bottom (ALL) (need to account for windows bar)
 
 
 function setClockPosition(PValue) { /*Sets clock positon on screen*/
