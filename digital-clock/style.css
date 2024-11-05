@@ -1,3 +1,8 @@
-body {
-    
+*{
+   margin: 0px;
+   padding: 0px;
+}
+.Main_Div{
+   width: 10vw;
+   height: 10vw;
 }
