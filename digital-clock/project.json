@@ -4,6 +4,61 @@
 	{
 		"properties" : 
 		{
+			"clockposition" : 
+			{
+				"index" : 0,
+				"options" : 
+				[
+					{
+						"label" : "Top Left",
+						"value" : "0"
+					},
+					{
+						"label" : "Top Center",
+						"value" : "1"
+					},
+					{
+						"label" : "Top Right",
+						"value" : "2"
+					},
+					{
+						"label" : "Center Left",
+						"value" : "3"
+					},
+					{
+						"label" : "Center Center",
+						"value" : "4"
+					},
+					{
+						"label" : "Center Right",
+						"value" : "5"
+					},
+					{
+						"label" : "Bottom Left",
+						"value" : "6"
+					},
+					{
+						"label" : "Bottome Center",
+						"value" : "7"
+					},
+					{
+						"label" : "Bottom Right",
+						"value" : "8"
+					}
+				],
+				"order" : 100,
+				"text" : "Clock Position",
+				"type" : "combo",
+				"value" : "1"
+			},
+			"custombackground" : 
+			{
+				"index" : 1,
+				"order" : 101,
+				"text" : "Custom Background",
+				"type" : "file",
+				"value" : ""
+			},
 			"schemecolor" : 
 			{
 				"order" : 0,
@@ -13,7 +68,7 @@
 			}
 		}
 	},
-	"title" : "index",
+	"title" : "SBB Clock",
 	"type" : "web",
 	"version" : 0
 }
