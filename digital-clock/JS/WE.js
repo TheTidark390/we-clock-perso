@@ -2,23 +2,24 @@ function onLoad(){
     const section = document.getElementById('Mainsection');
     section.style.height = window.innerHeight+"px";
     section.style.width = window.innerWidth+"px";
+    const imgtag = document.getElementById('CSBackGround');
+    imgtag.height = window.innerHeight+'px';
+    imgtag.width = window.innerWidth+'px';
+    imgtag.style.height = window.innerHeight+'px';
+    imgtag.style.width = window.innerWidth+'px';
 };
 
 window.wallpaperPropertyListener = {
     applyUserProperties: function(properties){
         if (properties.clockposition){
             let clpo = properties.clockposition.value;
-            toString(clpo)
+            toString(clpo);
             setClockPosition(clpo);
         }
         if (properties.custombackground) {
-            
-        } else {
-            
         }
     }
-}
-
+};
 
 function setClockPosition(PValue) { //Sets clock positon on screen
     let ClockDiv = document.getElementById("sbb_uhr_container").style

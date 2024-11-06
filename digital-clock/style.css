@@ -1,6 +1,7 @@
 *{
    margin: 0px;
    padding: 0px;
+   overflow: hidden;
 }
 .Main_Div{
    width: 10vw;
