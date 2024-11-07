@@ -18,6 +18,10 @@
 						"value" : "1"
 					},
 					{
+						"label" : "Top Right",
+						"value" : "2"
+					},
+					{
 						"label" : "Center Left",
 						"value" : "3"
 					},
@@ -25,6 +29,22 @@
 						"label" : "Center Center",
 						"value" : "4"
 					},
+					{
+						"label" : "Center Right",
+						"value" : "5"
+					},
+					{
+						"label" : "Bottom Left",
+						"value" : "6"
+					},
+					{
+						"label" : "Bottome Center",
+						"value" : "7"
+					},
+					{
+						"label" : "Bottom Right",
+						"value" : "8"
+					}
 				],
 				"order" : 100,
 				"text" : "Clock Position",

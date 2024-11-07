@@ -23,7 +23,7 @@ function setClockPosition(PValue) {
             ClockDiv.position = 'absolute';
             ClockDiv.top = '0%';
             ClockDiv.left = '50%';
-            ClockDiv.transform = 'translate(0%, 0%)';
+            ClockDiv.transform = 'translate(-50%, 0%)';
             break;
         case "2" ://Top Right Doesn't work
             ClockDiv.position = 'absolute';
