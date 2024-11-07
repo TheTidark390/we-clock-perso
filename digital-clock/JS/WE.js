@@ -3,25 +3,14 @@ function onLoad(){
     section.style.height = window.innerHeight+"px";
     section.style.width = window.innerWidth+"px";
     const imgtag = document.getElementById('CSBackGround');
-    imgtag.height = window.innerHeight+'px';
-    imgtag.width = window.innerWidth+'px';
+    /*imgtag.height = window.innerHeight+'px';
+    imgtag.width = window.innerWidth+'px'; */
     imgtag.style.height = window.innerHeight+'px';
     imgtag.style.width = window.innerWidth+'px';
-};
+}
 
-window.wallpaperPropertyListener = {
-    applyUserProperties: function(properties){
-        if (properties.clockposition){
-            let clpo = properties.clockposition.value;
-            toString(clpo);
-            setClockPosition(clpo);
-        }
-        if (properties.custombackground) {
-        }
-    }
-};
-
-function setClockPosition(PValue) { //Sets clock positon on screen
+/* Function used to select the position of the clock on the screen, default is center center.*/
+function setClockPosition(PValue) {
     let ClockDiv = document.getElementById("sbb_uhr_container").style
     switch(PValue) {
         case "0" ://Top Left
@@ -34,13 +23,12 @@ function setClockPosition(PValue) { //Sets clock positon on screen
             ClockDiv.position = 'absolute';
             ClockDiv.top = '0%';
             ClockDiv.left = '50%';
-            ClockDiv.transform = 'translate(-50%)';
+            ClockDiv.transform = 'translate(0%, 0%)';
             break;
         case "2" ://Top Right Doesn't work
             ClockDiv.position = 'absolute';
             ClockDiv.top = '0%';
-            ClockDiv.left = '90%';
-            ClockDiv.transform = 'translate(0%)';
+            ClockDiv.right = '100%';
             break;
         case "3" ://Center Left
             ClockDiv.position = 'absolute';
@@ -76,7 +64,7 @@ function setClockPosition(PValue) { //Sets clock positon on screen
             ClockDiv.position = 'absolute';
             ClockDiv.top = '100%';
             ClockDiv.right = '0%';
-            ClockDiv.transform = 'translate(0%, -100%)';
+            ClockDiv.transform = 'translate(0px, 50%)';
             break;
         default:
             ClockDiv.position = 'absolute';
@@ -85,4 +73,25 @@ function setClockPosition(PValue) { //Sets clock positon on screen
             ClockDiv.transform = 'translate(0%, -50%)';
             break
    }
+}
+
+window.wallpaperPropertyListener = {
+    applyUserProperties: function(properties){
+        if (properties.clockposition){
+            let clpo = properties.clockposition.value;
+            toString(clpo);
+            setClockPosition(clpo);
+        }
+        if (properties.custombackground) {
+            const prefix = 'file:///'
+            const DefaultBG = './mountain-snow-train-mountain-range-transport-vehicle-644567-pxhere.com.jpg'
+            const imgtag = document.getElementById('CSBackGround')
+            let img = prefix+properties.custombackground.value;
+            if (img == prefix) {
+                imgtag.src = DefaultBG;
+            } else {
+                imgtag.src = img;
+            }
+        }
+    }
 }
